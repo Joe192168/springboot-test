@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  master:
+    image: gettyimages/spark:1.6.0-hadoop-2.6
+    container_name: master
+    command: bin/spark-class org.apache.spark.deploy.master.Master -h master
+    network_mode: 'host'
+    restart: always
+    environment:
+      MASTER: spark://master:7077
+      SPARK_CONF_DIR: /conf
+      SPARK_MASTER_WEBUI_PORT: 8090
+    volumes:
+      - ./spark/master/conf:/usr/spark-1.6.0-bin-hadoop2.6/conf
+      - ./spark/master/data:/usr/spark-1.6.0-bin-hadoop2.6/data
+  worker1:
+    image: gettyimages/spark:1.6.0-hadoop-2.6
+    container_name: worker1
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
+    network_mode: 'host'
+    restart: always
+    environment:
+      SPARK_CONF_DIR: /conf
+      SPARK_WORKER_CORES: 8
+      SPARK_WORKER_MEMORY: 8g
+      SPARK_WORKER_PORT: 8881
+      SPARK_WORKER_WEBUI_PORT: 8091
+    volumes:
+      - ./spark/worker1/conf:/usr/spark-1.6.0-bin-hadoop2.6/conf
+      - ./spark/worker1/data:/usr/spark-1.6.0-bin-hadoop2.6/data
+  worker2:
+    image: gettyimages/spark:1.6.0-hadoop-2.6
+    container_name: worker2
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
+    network_mode: 'host'
+    restart: always
+    environment:
+      SPARK_CONF_DIR: /conf
+      SPARK_WORKER_CORES: 8
+      SPARK_WORKER_MEMORY: 8g
+      SPARK_WORKER_PORT: 8882
+      SPARK_WORKER_WEBUI_PORT: 8092
+    volumes:
+      - ./spark/worker2/conf:/usr/spark-1.6.0-bin-hadoop2.6/conf
+      - ./spark/worker2/data:/usr/spark-1.6.0-bin-hadoop2.6/data
