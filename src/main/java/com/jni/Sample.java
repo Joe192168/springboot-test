@@ -16,3 +16,11 @@ public class Sample
  {
      public native int add(int x, int y);
  }
+
+class NativeMethodTest
+{
+    public native int intMethod(int n);
+    public native boolean booleanMethod(boolean bool);
+    public native String stringMethod(String text);
+    public native int intArrayMethod(int[] intArray);
+}

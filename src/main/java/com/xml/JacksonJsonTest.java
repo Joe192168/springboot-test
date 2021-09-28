@@ -31,12 +31,12 @@ public class JacksonJsonTest {
         book.setIsFlag(true);
         book.setPubDate("2020-07-03");
         // 实体类 转 xml.
-        String xml = objMapper.writeValueAsString(book);
-        System.out.println("book-xml:" + "\n" + xml);
+        String json = objMapper.writeValueAsString(book);
+        System.out.println("book-json:" + "\n" + json);
 
         // XML to 实体
-        Book book1 = objMapper.readValue(xml, Book.class);
-        System.out.println("xml->book:" + "\n" + book1);
+        Book book1 = objMapper.readValue(json, Book.class);
+        System.out.println("json->book:" + "\n" + book1);
     }
 
 }
