@@ -32,7 +32,7 @@ public class PersonService1 {
     public List<Person> find(Predicate<Person> predicate){
         List<Person> people = new ArrayList<>();
         for (Person p : list){
-            if(predicate.test(p)){
+            if(predicate.com.test(p)){
                 people.add(p);
             }
         }

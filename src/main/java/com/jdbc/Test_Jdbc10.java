@@ -15,7 +15,7 @@ public class Test_Jdbc10 {
         }
     }
     //定义数据库连接地址
-    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/test?useSSL=true&characterEncoding=utf8";
+    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/com.test?useSSL=true&characterEncoding=utf8";
     //数据库用户名
     public static final String DBUSER = "root";
     //数据库密码
@@ -28,7 +28,7 @@ public class Test_Jdbc10 {
 
         ps.setString(1,name);
         //插入图片占位符值
-        ps.setBlob(2, new FileInputStream("D:\\test.jpg"));
+        ps.setBlob(2, new FileInputStream("D:\\com.test.jpg"));
 
         //执行插入图片
         int executeUpdate = ps.executeUpdate();

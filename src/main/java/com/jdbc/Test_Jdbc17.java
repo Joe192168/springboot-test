@@ -12,7 +12,7 @@ public class Test_Jdbc17 {
         }
     }
     //定义数据库连接地址
-    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/test?useSSL=true&characterEncoding=utf8";
+    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/com.test?useSSL=true&characterEncoding=utf8";
     public static final String DBUSER = "root";
     public static final String DBPASS = "root";
     public static void main(String[] agrs) throws Exception{

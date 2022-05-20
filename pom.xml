@@ -11,7 +11,7 @@
     <groupId>com.test</groupId>
     <artifactId>springboot-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-test</name>
+    <name>springboot-com.test</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
@@ -98,6 +98,45 @@
             <artifactId>sharding-core</artifactId>
             <version>3.1.0.M1</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun.schedulerx</groupId>
+            <artifactId>schedulerx2-spring-boot-starter</artifactId>
+            <version>1.2.8</version>
+            <!--如果用的是logback，需要把log4j和log4j2排除掉 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>5.10.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

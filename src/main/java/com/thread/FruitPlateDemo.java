@@ -2,7 +2,7 @@ package com.thread;
 
 public class FruitPlateDemo {
 
-    private final static String LOCK = "lock";
+    private final static String LOCK = "com/lock";
 
     private int count = 0;
 

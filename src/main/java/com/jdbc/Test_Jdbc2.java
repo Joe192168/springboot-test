@@ -17,7 +17,7 @@ public class Test_Jdbc2 {
     }
 
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://192.168.0.233:3306/test?useSSL=true&characterEncoding=utf8";
+        String url = "jdbc:mysql://192.168.0.233:3306/com.test?useSSL=true&characterEncoding=utf8";
         String db_user = "root" ;
         String db_password = "root";
         //创建连接

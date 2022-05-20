@@ -18,7 +18,7 @@ public class Test_Jdbc4 {
     //定义mysql的数据库驱动程序
     //public static final String DBDRIEVER = "com.mysql.jdbc.Driver";
     //定义数据库的连接地址
-    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/test?useSSL=true&characterEncoding=utf8";
+    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/com.test?useSSL=true&characterEncoding=utf8";
     //定义数据库用户名
     public static final String DBUSER = "root";
     //定义数据库密码

@@ -7,11 +7,11 @@ import java.sql.*;
 public class Test_Jdbc3 {
 
     public static void main(String[] args) throws Exception {
-        String url = "jdbc:mysql://192.168.0.233:3306/test?useSSL=true&characterEncoding=utf8" ;
+        String url = "jdbc:mysql://192.168.0.233:3306/com.test?useSSL=true&characterEncoding=utf8" ;
         String db_user = "root" ;
         String db_password = "root";
-        //sql.txt ：select * from t_user
-        BufferedReader br = new BufferedReader(new FileReader("d:\\sql.txt"));
+        //com.sql.txt ：select * from t_user
+        BufferedReader br = new BufferedReader(new FileReader("d:\\com.sql.txt"));
         String sql = br.readLine();
         Connection conn = (Connection) DriverManager.getConnection(url,db_user,db_password);
         Statement stmt = (Statement)conn.createStatement();

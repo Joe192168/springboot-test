@@ -6,12 +6,12 @@ import com.sun.jna.Native;
 public class JNATest {
 
     public interface CLibrary extends Library {
-        CLibrary instance = Native.load("H:\\Git\\springboot-test\\src\\main\\resources\\NativeAdd", CLibrary.class);
+        CLibrary instance = Native.load("H:\\Git\\springboot-com.test\\src\\main\\resources\\NativeAdd", CLibrary.class);
         int add(int x, int y);
     }
 
     public interface TestLibrary extends Library {
-        TestLibrary instance = Native.load("H:\\Git\\springboot-test\\src\\main\\resources\\TEST", TestLibrary.class);
+        TestLibrary instance = Native.load("H:\\Git\\springboot-com.test\\src\\main\\resources\\TEST", TestLibrary.class);
         double Add(double a, double b);
         double Divide(double a, double b);
     }

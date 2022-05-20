@@ -16,7 +16,7 @@ public class Test_Jdbc7 {
         }
     }
     //数据库连接地址
-    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/test?useSSL=true&characterEncoding=utf8";
+    public static final String DBURL = "jdbc:mysql://192.168.0.233:3306/com.test?useSSL=true&characterEncoding=utf8";
     //数据库用户名
     public static final String DBUSER = "root";
     //数据库密码
@@ -25,7 +25,7 @@ public class Test_Jdbc7 {
         //定义名称
         String name = "张三";
         //定义备注
-        File f = new File("d:\\sql.txt");
+        File f = new File("d:\\com.sql.txt");
         FileInputStream fis = new FileInputStream(f);
         //连接数据库
         Connection conn = (Connection) DriverManager.getConnection(DBURL,DBUSER,DBPASS);

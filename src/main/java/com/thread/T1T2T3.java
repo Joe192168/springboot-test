@@ -68,17 +68,17 @@ public class T1T2T3 {
  *
  *    join() 的源码：
  *    public final void join(long millis) throws InterruptedException {
- *         synchronized(lock) {
+ *         synchronized(com.com.lock) {
  *         ...
  *
  *           while (isAlive()) {
- *              lock.wait(0);
+ *              com.com.lock.wait(0);
  *           }
  *        ...
  *         }
  *    }
  *
- *    其实就是main()线程调用join()后，synchronized(lock)语句块，获得lock的锁，
+ *    其实就是main()线程调用join()后，synchronized(com.com.lock)语句块，获得lock的锁，
  *
  *    然后判断如果t1线程isAlive(), 就一直lock.wait(), 让自己（main()线程）阻塞住，
  *

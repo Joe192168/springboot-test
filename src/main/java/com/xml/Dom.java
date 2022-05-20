@@ -8,7 +8,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 public class Dom {
 
-    static final String XML_URL = "H:\\Git\\springboot-test\\src\\main\\resources\\book.xml";
+    static final String XML_URL = "H:\\Git\\springboot-com.test\\src\\main\\resources\\book.xml";
 
     public static void main(String[] args) throws Exception {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

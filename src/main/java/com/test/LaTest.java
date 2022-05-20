@@ -18,7 +18,7 @@ public class LaTest {
             }
             //串行计算 耗时：558
             /*long start = System.currentTimeMillis();
-            long count = arrayList.stream().sorted().count();
+            long count = arrayList.com.stream().sorted().count();
             System.out.println(count);
             long end = System.currentTimeMillis();
             long millis = end - start;
