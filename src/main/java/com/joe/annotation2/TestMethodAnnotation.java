@@ -8,6 +8,11 @@ import java.util.List;
 
 public class TestMethodAnnotation {
 
+    @MyLog("sss")
+    public static void testAx(){
+        System.out.println();
+    }
+
     @Override
     @MyMethodAnnotation(title = "toStringMethod", description = "override toString method")
     public String toString() {

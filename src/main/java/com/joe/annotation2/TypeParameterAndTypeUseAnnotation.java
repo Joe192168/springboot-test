@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * 测试类
  * @param <T>
  */
+@MyNotNull
 public class TypeParameterAndTypeUseAnnotation<@MyNotEmpty T>{
 
   //使用TYPE_PARAMETER类型，会编译不通过
