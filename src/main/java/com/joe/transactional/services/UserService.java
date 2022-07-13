@@ -23,9 +23,9 @@ public class UserService {
     public boolean updateById(User user) {
     	userMapper.updateUser(user);
 		otherService.insertUser();
-    	if(true) {
+    	/*if(true) {
     		throw new RuntimeException("updateUserById 抛异常了");
-    	}
+    	}*/
         return true;
     }
     
