@@ -14,18 +14,21 @@ public class ListMapTest {
 
         Map<String,Object> map1 = new HashMap<>();
         map1.put("id",1);
+        map1.put("order",1);
         map1.put("target_value",100);
 
         list.add(map1);
 
         Map<String,Object> map2 = new HashMap<>();
         map2.put("id",2);
+        map2.put("order",3);
         map2.put("target_value",200);
 
         list.add(map2);
 
         Map<String,Object> map3 = new HashMap<>();
         map3.put("id",1);
+        map3.put("order",2);
         map3.put("target_value",300);
 
         list.add(map3);
@@ -46,7 +49,13 @@ public class ListMapTest {
                 o1.put("target_value", v);
             }
             return o1;
-        })).values().stream().collect(Collectors.toList());
+        })).values().stream().sorted(new Comparator<Map<String, Object>>() {
+            //按照order排序
+            @Override
+            public int compare(Map<String, Object> o1, Map<String, Object> o2) {
+                return Integer.parseInt(o1.get("order").toString())-Integer.parseInt(o2.get("order").toString());
+            }
+        }).collect(Collectors.toList());
 
         for (Map<String, Object> map : mapList) {
             System.out.println(map.get("id")+":"+map.get("target_value"));
