@@ -59,9 +59,9 @@ public class Test3 {
         //通过反射 newInstance 创建对象
         User user = (User) c1.newInstance();
         //获取指定方法
-        Method getName = c1.getDeclaredMethod("getName", null);
+        Method getName = c1.getDeclaredMethod("test", null);
 
-        //关闭检查
+        // 为true时可以访问私有类型变量
         getName.setAccessible(true);
 
         //开始时间

@@ -40,7 +40,7 @@ public class User {
         this.age = age;
     }
 
-    public void test(){
+    private void test(){
 
     }
 
